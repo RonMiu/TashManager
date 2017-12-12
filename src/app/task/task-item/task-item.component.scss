@@ -1,0 +1,48 @@
+.container{
+    border-radius: 3px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+.content{
+}
+.bottom-bar{
+    height: 24px;
+    line-height: 24px;
+}
+.dut-date{
+    float: left;
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    background:rgb(206, 30, 53);
+    color: white;
+}
+.avatar{
+    border-radius: 50%;
+    // border: 2px solid red;
+}
+.completed{
+    color: rgb(214, 72, 119);
+    text-decoration: line-through;
+}
+.alarm{
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+}
+.priority-normal{
+    border-left: 3px solid gray;
+}
+.priority-important{
+    border-left: 3px solid rgb(245, 248, 73);
+}
+.priority-emergency{
+    border-left: 3px solid rgb(216, 0, 0);
+}
+.change-btn{
+    margin-left: 3px;
+    padding: 0 5px;
+}
+.drag-start{
+    opacity: 0.5;
+    border:2px dashed  #ff525b;
+}

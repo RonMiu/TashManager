@@ -1,0 +1,26 @@
+<form novalidate #f="ngForm" (ngSubmit)="onSubmit(f,$event)">
+    <md-input-container class="full-width">
+      <input type="text" mdInput 
+      placeholder="快速新建一个任务"
+      [(ngModel)]="desc"
+      name="newTask"
+      required
+      >
+      <button mdSuffix md-icon-button type="submit">
+        <md-icon>send</md-icon>
+      </button>
+      <md-error>不能为空</md-error>
+    </md-input-container>
+
+  <!-- <div md-dialog-actions>
+    <button type="button" md-raised-button color="primary" (click)="onClick()">保存</button>
+    <button type="button" md-button md-dialog-close>关闭</button>
+  </div> -->
+</form>
+
+<!-- <div>
+  表单数据:{{f.value | json}}
+</div>
+<div>
+  表单验证状态:{{f.valid | json}}
+</div> -->

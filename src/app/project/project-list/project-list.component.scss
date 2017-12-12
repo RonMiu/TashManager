@@ -1,0 +1,17 @@
+.card{
+    // width: 300px;
+    height: 360px;
+    flex: 0 0 360px;
+    margin: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.add-btn{
+    position: absolute;
+    right: 25px;
+    bottom: 65px;
+    z-index: 999;
+}

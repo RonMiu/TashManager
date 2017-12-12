@@ -1,0 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form,$event)">
+    <md-card>
+      <md-card-header>
+        <md-card-title><h3>注册：</h3></md-card-title>
+      </md-card-header>
+      <md-card-content>
+        <md-input-container class="full-width" floatPlaceholder="float"> 
+          <input mdInput type="text" placeholder="您的Email" formControlName="email">
+        </md-input-container>
+        <md-input-container class="full-width" floatPlaceholder="float"> 
+            <input mdInput type="text" placeholder="您的姓名" formControlName="name">
+          </md-input-container>
+        <md-input-container class="full-width"  floatPlaceholder="float"> 
+          <input mdInput type="password" placeholder="登录密码" formControlName="password">
+        </md-input-container>
+        <md-input-container class="full-width "  floatPlaceholder="float"> 
+          <input mdInput type="password" placeholder="请再次输入您的密码" formControlName="confirmPassword">
+        </md-input-container>
+        <app-image-list-select
+        [useSvgIcon]="true"
+        [cols]="6"
+        [title]="'选择头像'"
+        [items]="items"
+        formControlName="avatar"
+        >
+
+        </app-image-list-select>
+        <!-- <app-age-input formControlName="dateOfBirth" (change)="onChange($event)"></app-age-input> -->
+        <button md-raised-button type="submit" class="full-width" color="warn">注册</button>
+      </md-card-content>
+      <md-card-actions class="text-right text-size">
+        <p>已有账户?<a routerLink="/login">登录</a></p>
+        <p>忘记密码?<a href="#">找回</a></p>
+      </md-card-actions>
+    </md-card>
+  </form>

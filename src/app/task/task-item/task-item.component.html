@@ -1,0 +1,25 @@
+<md-list-item class="container"
+  [@item]="itemState"
+  [ngClass]="{
+    'priority-normal':task.priority===1,
+    'priority-important':task.priority===2,
+    'priority-emergency':task.priority===3
+  }"
+  [app-draggable]="'true'"
+  [draggedClass]="'drag-start'"
+  [dragTag]="'task-item'"
+  [dragData]="task"
+  (click)="onItemClick()"
+>
+  <md-checkbox [checked]="task.completed" (click)="onCheckBoxClick($event)"></md-checkbox>
+  <div md-line class="content" [ngClass]="{completed:task.completed}">
+    <span [mdTooltip]="task.desc">{{task.desc}}</span>
+  </div>
+  <div md-line class="bottom-bar" *ngIf="task.dueDate">
+    <span class="dut-date">日期:{{task.dueDate|date:"yy-mm-dd"}}</span>
+    <md-icon *ngIf="task.reminder" class="alarm">alarm</md-icon>
+  </div>
+  <!-- <p greet></p> -->
+  <md-icon [svgIcon]="avatar" md-list-avatar class="avatar"></md-icon>
+  <!-- <button md-button type="button" class="change-btn" (click)="onItemClick()" color="">修改任务</button> -->
+</md-list-item>
